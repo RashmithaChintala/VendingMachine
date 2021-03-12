@@ -29,11 +29,10 @@ namespace VendingMachine
             {
 
 
-
                 String coinType = "";
-                String amount = "0";
+                double amount = 0;
                 String coinReturn = "";
-                Products pd = new Products();
+                Products objPrd = new Products();
                 while (true)
                 {
                     Console.WriteLine("Please Insert Coin");
@@ -44,32 +43,32 @@ namespace VendingMachine
                     Console.WriteLine("Coin Size is ");
                     int size = Convert.ToInt32(Console.ReadLine());
 
-                    Money objMoney = new Money();
+                    Denominations objDnm = new Denominations();
 
-                    coinType = objMoney.InsertedCoinIs(weight.ToString(), size.ToString());
+                    coinType = objDnm.InsertedCoinIs(weight, size);
 
-                    String coinValue = "";
+                    double coinValue = 0;
 
                     switch (coinType)
                     {
-                        case Constants.nickel: coinValue = Constants.nickelValue.ToString(); break;
+                        case Constants.nickel: coinValue = Constants.nickelValue; break;
 
-                        case Constants.dime: coinValue = Constants.dimeValue.ToString(); break;
+                        case Constants.dime: coinValue = Constants.dimeValue; break;
 
-                        case Constants.quarter: coinValue = Constants.quarterValue.ToString(); break;
+                        case Constants.quarter: coinValue = Constants.quarterValue; break;
 
-                        case Constants.penny: coinValue = "0"; break;
+                        case Constants.penny: coinValue = Constants.pennyValue; break;
 
-                        default: coinValue = ""; break;
+                        default: coinValue = 0; break;
 
                     }
 
-                    if (coinValue == "")
+                    if (coinValue == 0)
                     {
                         Console.WriteLine("Please insert valid coin");
                         break;
                     }
-                    else if (coinValue == "0")
+                    else if (coinValue == 0.01)
                     {
                         coinReturn = coinReturn + coinType;
                         Console.WriteLine("Pennies are not allowed. Please insert valid coin");
@@ -77,10 +76,10 @@ namespace VendingMachine
                     }
                     else
                     {
-                        amount = (Convert.ToDecimal(amount) + Convert.ToDecimal(coinValue)).ToString();
+                        amount = (amount + coinValue);
                     }
 
-                    if (pd.getProduct(product, amount))
+                    if (objPrd.getProduct(product, amount))
                     {
                         break;
                     }

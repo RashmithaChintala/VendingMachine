@@ -9,20 +9,20 @@ namespace VendingMachine
     class Products
     {
         //dispatching the product
-        public bool getProduct(String product, String amount)
+        public bool getProduct(String product, Double amount)
         {
             
             if (product != null && product != "") 
             {
                 if(product.ToUpper() == Constants.cola)
                 {
-                    if(amount == Constants.colaPrice.ToString())
+                    if(amount == Constants.colaPrice)
                     {
                         Console.WriteLine("Thank you!");
                         return true;
                     }
 
-                    else if (Convert.ToDecimal(amount) < Constants.colaPrice)
+                    else if (amount < Constants.colaPrice)
                     {
                         Console.WriteLine("Price of the item is " + Constants.colaPrice.ToString() + " Inserted amount is " + amount);
                         Console.WriteLine("Please insert sufficent amount");
@@ -32,13 +32,13 @@ namespace VendingMachine
 
                 else if (product.ToUpper() == Constants.chips)
                 {
-                    if (amount == Constants.chipsPrice.ToString())
+                    if (amount == Constants.chipsPrice)
                     {
                         Console.WriteLine("Thank you!");
                         return true;
                     }
 
-                    else if(Convert.ToDecimal(amount) < Constants.chipsPrice)
+                    else if(amount < Constants.chipsPrice)
                     {
                         Console.WriteLine("Price of the item is " + Constants.chipsPrice.ToString() + " Inserted amount is " + amount);
                         Console.WriteLine("Please insert sufficent amount");
@@ -48,13 +48,13 @@ namespace VendingMachine
 
                 else if (product.ToUpper() == Constants.candy)
                 {
-                    if (amount == Constants.candyPrice.ToString())
+                    if (amount == Constants.candyPrice)
                     {
                         Console.WriteLine("Thank you!");
                         return true;
                     }
 
-                    else if (Convert.ToDecimal(amount) < Constants.candyPrice)
+                    else if (amount < Constants.candyPrice)
                     {
                         Console.WriteLine("Price of the item is " + Constants.candyPrice.ToString() + " Inserted amount is " + amount);
                         Console.WriteLine("Please insert sufficent amount");

@@ -24,7 +24,7 @@ namespace VendingMachine
 
         public const int pennyWeight = 1;
         public const int pennySize = 1;
-       
+        public const double pennyValue = 0.01;
 
         public const String nickel = "NICKEL";
         public const String dime = "DIME";
@@ -36,9 +36,9 @@ namespace VendingMachine
         public const String chips = "CHIPS";
         public const String candy = "CANDY";
 
-        public const decimal colaPrice = 1.00M;
-        public const decimal chipsPrice = 0.50M;
-        public const decimal candyPrice = 0.65M;
+        public const double colaPrice = 1.00;
+        public const double chipsPrice = 0.50;
+        public const double candyPrice = 0.65;
 
 
     }
