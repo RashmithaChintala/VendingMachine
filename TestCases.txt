@@ -1,0 +1,84 @@
+Test case 1:
+
+Choose Product
+Cola
+Chips
+Candy
+
+cola
+Please Insert Coin
+Coin Weight is
+3
+Coin Size is
+5
+Price of the item is 1.00 Inserted amount is 0.25
+Please insert sufficent amount
+Please Insert Coin
+Coin Weight is
+3
+Coin Size is
+5
+Price of the item is 1.00 Inserted amount is 0.50
+Please insert sufficent amount
+Please Insert Coin
+Coin Weight is
+3
+Coin Size is
+5
+Price of the item is 1.00 Inserted amount is 0.75
+Please insert sufficent amount
+Please Insert Coin
+Coin Weight is
+3
+Coin Size is
+5
+Thank you!
+
+
+
+Case 2:
+
+Choose Product
+Cola
+Chips
+Candy
+
+chocolate
+Product is not available, Please choose from above list
+
+
+Case 3:
+
+
+Choose Product
+Cola
+Chips
+Candy
+
+candy
+Please Insert Coin
+Coin Weight is
+20
+Coin Size is
+20
+Please insert valid coin
+
+
+Case 4:
+
+Choose Product
+Cola
+Chips
+Candy
+
+candy
+Please Insert Coin
+Coin Weight is
+1
+Coin Size is
+1
+Pennies are not allowed. Please insert valid coin
+
+
+
+
